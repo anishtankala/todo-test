@@ -51,15 +51,26 @@ body {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   }
   
-  #add-button {
+  .todo-button {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 14px;
     background: rgba(255, 255, 255, 0.1);
     border: none;
     border-radius: 5px;
     color: rgba(255, 255, 255, 0.9);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+  }
+  
+  #add-button {
+    /* padding: 10px 20px; */
+    font-size: 16px;
+    /* background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    cursor: pointer; */
   }
   
   #todo-list {
@@ -93,13 +104,24 @@ body {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   }
   
-  #clear-button {
+  /* #clear-button {
     padding: 10px 20px;
-    font-size: 14px;
+    font-size: 16px;
     background: rgba(255, 255, 255, 0.1);
     border: none;
     border-radius: 5px;
     color: rgba(255, 255, 255, 0.9);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+  } */
+
+  .button-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
   }
+  
+  .button-row button {
+    margin: 0 5px;
+  }
+  
