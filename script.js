@@ -40,7 +40,20 @@ const todoList = document.getElementById('todo-list');
 const clearButton = document.getElementById('clear-button');
 
 // Add event listener to the add button
-addButton.addEventListener('click', addTodo);
+// addButton.addEventListener('click', addTodo);
+addButton.addEventListener('click', () => {
+    const todoText = todoInput.value.trim();
+    if (todoText !== '') {
+      const todoItem = document.createElement('li');
+      todoItem.classList.add('todo-item');
+      todoItem.innerHTML = `
+        <input type="checkbox">
+        <span>${todoText}</span>
+      `;
+      todoList.appendChild(todoItem);
+      todoInput.value = '';
+    }
+  });
 
 // Add event listener to the todo input for Enter key press
 todoInput.addEventListener('keydown', function(event) {
