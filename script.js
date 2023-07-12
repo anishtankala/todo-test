@@ -38,6 +38,7 @@ const todoInput = document.getElementById('todo-input');
 const addButton = document.getElementById('add-button');
 const todoList = document.getElementById('todo-list');
 const clearButton = document.getElementById('clear-button');
+const clearCompletedButton = document.getElementById("clear-completed-button");
 
 // Add event listener to the add button
 // addButton.addEventListener('click', addTodo);
@@ -91,4 +92,36 @@ function createTodoItem(todoText) {
   todoItem.appendChild(todoTextSpan);
 
   return todoItem;
+}
+
+// Add click event listener to the clear completed button
+clearCompletedButton.addEventListener("click", clearCompletedTodos);
+
+// Function to clear completed todos
+function clearCompletedTodos() {
+  // Get the todo list element
+  const todoList = document.getElementById("todo-list");
+
+  // Get all todo items
+  const todoItems = todoList.getElementsByClassName("todo-item");
+
+  // Create an array to store the completed todo items
+  const completedItems = [];
+
+  // Loop through each todo item
+  for (let i = 0; i < todoItems.length; i++) {
+    const todoItem = todoItems[i];
+
+    // Check if the todo item is completed
+    const checkbox = todoItem.querySelector("input[type='checkbox']");
+    if (checkbox.checked) {
+      // Add the completed todo item to the array
+      completedItems.push(todoItem);
+    }
+  }
+
+  // Remove the completed todo items from the todo list
+  completedItems.forEach((item) => {
+    item.remove();
+  });
 }
