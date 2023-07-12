@@ -9,10 +9,13 @@
     <div id="todo-container">
       <span>
         <input type="text" id="todo-input" placeholder="Add a new todo" />
-        <button id="add-button">Add</button>
+        <button class="todo-button" id="add-button">Add</button>
       </span>
       <ul id="todo-list"></ul>
-      <button id="clear-button">Clear List</button>
+      <div class="button-row">
+        <button class="todo-button" id="clear-button">Clear List</button>
+        <button class="todo-button" id="clear-completed-button">Clear Completed</button>
+      </div>
     </div>
 
     <script src="script.js"></script>
