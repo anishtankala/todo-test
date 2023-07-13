@@ -20,7 +20,7 @@ body {
   
   h1 {
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     font-weight: 700;
     font-size: 32px;
     color: rgba(255, 255, 255, 0.9);
@@ -37,7 +37,6 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    /* flex-basis: 50%; */
     max-width: 60%;
     margin-inline: auto;
     align-self: auto;
