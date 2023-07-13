@@ -2,19 +2,21 @@
 <html>
   <head>
     <title>Todo App</title>
-    <link rel="stylesheet" type="text/css" href="styles1.css" />
+    <link rel="stylesheet" type="text/css" href="styles/styles1.css" />
   </head>
   <body>
     <h1>TODO</h1>
     <div id="todo-container">
-      <span>
+      <div class="input-area">
         <input type="text" id="todo-input" placeholder="Add a new todo" />
         <button class="todo-button" id="add-button">Add</button>
-      </span>
+      </div>
       <ul id="todo-list"></ul>
       <div class="button-row">
         <button class="todo-button" id="clear-button">Clear List</button>
-        <button class="todo-button" id="clear-completed-button">Clear Completed</button>
+        <button class="todo-button" id="clear-completed-button">
+          Clear Completed
+        </button>
       </div>
     </div>
 

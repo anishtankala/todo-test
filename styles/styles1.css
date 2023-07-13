@@ -1,5 +1,12 @@
+@font-face {
+    font-family: "Mattone-150";
+    src: url("Mattone-150.woff2") format("woff2"),
+         url("Mattone-150.woff") format("woff");
+  }
+
 body {
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
+    font-family: "Mattone-150";
     margin: 0;
     padding: 20px;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.15)), url(background.jpg);
@@ -40,6 +47,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
+
   #todo-input {
     width: 300px;
     padding: 10px;
@@ -50,8 +58,14 @@ body {
     color: rgba(255, 255, 255, 0.9);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   }
+
+  #todo-input:focus {
+    outline: none;
+    /* border: 2px solid #007bff; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
   
-  .todo-button {
+  /* .todo-button {
     padding: 10px 20px;
     font-size: 14px;
     background: rgba(255, 255, 255, 0.1);
@@ -60,6 +74,25 @@ body {
     color: rgba(255, 255, 255, 0.9);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+  } */
+
+  .todo-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+  }
+  
+  .todo-button:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  .todo-button:active {
+    background: rgba(0, 0, 0, 0.4);
   }
   
   #add-button {
@@ -92,6 +125,7 @@ body {
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    color: black;
   }
   
   .todo-item input[type="checkbox"] {
@@ -104,17 +138,6 @@ body {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   }
   
-  /* #clear-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    border-radius: 5px;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-  } */
-
   .button-row {
     display: flex;
     justify-content: center;
@@ -125,3 +148,6 @@ body {
     margin: 0 5px;
   }
   
+  .input-area{
+    padding: 5px;
+  }
